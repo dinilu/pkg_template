@@ -24,6 +24,16 @@ usethis::use_git()
 gitcreds::gitcreds_set()
 usethis::use_github()
 usethis::use_github_action_check_release()
+usethis::use_lifecycle_badge("experimental")
 usethis::use_pkgdown_github_pages()
 pkgdown::build_site()
 ```
+
+This other code is to build and install with vignettes for the documentation of the package and not only to the pkgdown website.
+
+```r
+devtools::build(vignettes = TRUE)
+devtools::install(build_vignettes = TRUE)
+```
+
+
